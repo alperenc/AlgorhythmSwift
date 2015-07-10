@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlaylistMasterViewController.swift
 //  Algorhythm
 //
 //  Created by Alp Eren Can on 10/07/15.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PlaylistMasterViewController: UIViewController {
 
+    @IBOutlet weak var playlistImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
