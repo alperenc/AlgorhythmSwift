@@ -10,18 +10,33 @@ import UIKit
 
 class PlaylistDetailViewController: UIViewController {
     
-    @IBOutlet weak var playlistTitle: UILabel!
     var playlist: Playlist?
+    @IBOutlet weak var playlistCoverImage: UIImageView!
+    @IBOutlet weak var playlistTitle: UILabel!
+    @IBOutlet weak var playlistDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         if playlist != nil {
+            playlistCoverImage.image = playlist!.largeIcon
+            playlistCoverImage.backgroundColor = playlist!.backgroundColor
+            
             if let _ = playlist?.title {
                 playlistTitle.text = playlist!.title
+            } else {
+                playlistTitle.text = ""
+            }
+            
+            if let _ = playlist?.description {
+                playlistDescription.text = playlist!.description
+            } else {
+                playlistDescription.text = ""
             }
         }
+//        navigationItem.title = "Artists"
     }
 
     override func didReceiveMemoryWarning() {
