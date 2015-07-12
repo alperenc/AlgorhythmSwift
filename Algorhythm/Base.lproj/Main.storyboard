@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Tdb-vJ-KtK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Tdb-vJ-KtK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
     </dependencies>
     <scenes>
         <!--Playlist Master View Controller-->
@@ -28,24 +28,33 @@
                                     <outletCollection property="gestureRecognizers" destination="sXC-HA-6eu" appends="YES" id="wya-DN-34o"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89l-QW-sGh">
+                                <rect key="frame" x="139" y="353.5" width="42" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PKV-xl-KpX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="27O-aF-PzS"/>
+                            <constraint firstItem="89l-QW-sGh" firstAttribute="centerX" secondItem="PKV-xl-KpX" secondAttribute="centerX" id="QnF-3d-Jjg"/>
                             <constraint firstItem="PKV-xl-KpX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a8K-bf-yFd"/>
+                            <constraint firstItem="89l-QW-sGh" firstAttribute="bottom" secondItem="PKV-xl-KpX" secondAttribute="bottom" constant="-10" id="yyU-A3-dpj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H1U-bl-GGN"/>
                     <connections>
                         <outlet property="playlistImageView" destination="PKV-xl-KpX" id="ty9-Rv-5RD"/>
+                        <outlet property="playlistTitle" destination="89l-QW-sGh" id="Is8-Th-76z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="sXC-HA-6eu">
-                    <pressTypeMask key="allowedPressTypes"/>
                     <connections>
-                        <segue destination="5nm-OG-Yse" kind="push" id="CHy-IE-DS8"/>
+                        <segue destination="5nm-OG-Yse" kind="push" identifier="showPlaylist" id="CHy-IE-DS8"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

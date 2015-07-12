@@ -11,11 +11,17 @@ import UIKit
 class PlaylistDetailViewController: UIViewController {
     
     @IBOutlet weak var playlistTitle: UILabel!
+    var playlist: Playlist?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if playlist != nil {
+            if let _ = playlist?.title {
+                playlistTitle.text = playlist!.title
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
